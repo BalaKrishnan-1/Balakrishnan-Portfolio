@@ -1,0 +1,307 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,400&family=Lora:ital,wght@0,600;1,500&family=Oswald:wght@400;500&display=swap');
+
+.loading-wrapper{
+   background-color: #fff;
+   position: fixed;
+   left:0;
+   top:0;
+   width:100%;
+   height:100%;
+   z-index:9999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding:0;
+   margin:auto;
+   transition:opacity 25s;
+}
+
+.loading {
+   --speed-of-animation: 0.9s;
+   --gap: 6px;
+   --first-color: #4c86f9;
+   --second-color: #49a84c;
+   --third-color: #f6bb02;
+   --fourth-color: #f6bb02;
+   --fifth-color: #2196f3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100px;
+   gap: 6px;
+   height: 100px;
+  }
+  
+  .loading span {
+   width: 4px;
+   height: 50px;
+   background: var(--first-color);
+   animation: scale var(--speed-of-animation) ease-in-out infinite;
+  }
+  
+  .loading span:nth-child(2) {
+   background: var(--second-color);
+   animation-delay: -0.8s;
+  }
+  
+  .loading span:nth-child(3) {
+   background: var(--third-color);
+   animation-delay: -0.7s;
+  }
+  
+  .loading span:nth-child(4) {
+   background: var(--fourth-color);
+   animation-delay: -0.6s;
+  }
+  
+  .loading span:nth-child(5) {
+   background: var(--fifth-color);
+   animation-delay: -0.5s;
+  }
+  
+  @keyframes scale {
+   0%, 40%, 100% {
+    transform: scaleY(0.05);
+   }
+  
+   20% {
+    transform: scaleY(1);
+   }
+  }
+
+  .navbar{
+   background-color:rgba(255, 255,255,0.2);
+   backdrop-filter: blur(10px);
+   box-sizing:border-box;
+   box-shadow:0 4px 6px rgb(0,0,0,0.1);
+   font-size:24px;
+   font-family: 'Josefin Sans', sans-serif;
+  }
+
+  li{
+   margin-right:40px;
+   background-color:white;
+   color:black;
+   width:150px;
+   text-align: center;
+  border-radius: 50px;
+  border: 1px solid rgb(0, 158, 221);
+  position: relative;
+  overflow: hidden;
+  cursor:pointer;
+  background: transparent;
+  background: linear-gradient(#fff, #fff 50%, #2196f3 50%, #2196f3);
+  background-size: 100% 200%;
+  transition: background 1s;
+  }
+  li a{
+   color: black!important;
+   transition: color 1s;
+  }
+  li:hover a {
+   color:white!important;
+   transition: color 1s;
+   cursor:pointer;
+  }
+
+  li:hover,a:focus{
+  background-color: rgb(0, 158, 221);
+  color:#fff!important;
+  background-position: 100% 100%;
+  }
+  
+  nav-brand{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size:24px;
+  font-weight:bolder;
+   
+  }
+
+  nav-brand span1{
+   font-size: 48px;
+   margin-top:2px;
+   font-family: 'Josefin Sans', sans-serif;
+  }
+  #Home,#About{
+    padding-top:50px;
+  }
+  .Home,.Abt{
+    margin:100px;
+    padding-top:-90px;
+  }
+  .h-Card,.Abt{
+    -webkit-animation: fade-in-fwd 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+            animation: fade-in-fwd 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+@-webkit-keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+            transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+     opacity: 1;
+  }
+}
+  .h-Card{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0;
+    backdrop-filter: blur(10px);
+    width:100%;
+    padding:50px;
+    height:600px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  h1{
+    display: inline-block;
+    padding-left:25.5px !important;
+    font-size:60px!important;
+    font-weight:500;
+    overflow: hidden;
+    background: linear-gradient(to right, Red, midnightblue 50%,black 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 2s ease;
+    text-decoration: none;
+    &:hover {
+      background-position: 0 100%;
+  }}
+  p{
+    padding-left: 30px !important;
+  }
+  @media all,(min-width:600px) {
+  .h-Card{
+      height:850px !important;
+      width: 100% !important;
+    }
+  h1{
+    font-size:36px!important;
+  }
+  p{
+    font-size:16px!important;
+  }
+  #Me{
+    height:600px;
+    margin-top:2% !important;
+    position:absolute;
+    left:10%;
+  }
+  }
+  @media (max-width:580px){
+   
+    .h-Card{
+      height:850px !important;
+      width: 100% !important;
+    }
+  h1{
+    font-size:36px!important;
+  }
+  p{
+    font-size:16px!important;
+  }
+  #Me{
+    height:600px;
+    margin-top:2% !important;
+    position:absolute;
+    left: -2px !important;
+  }
+  }
+  @media (max-width:475px){
+    .h-Card{
+      height:450px !important;
+      width: 100% !important;
+    }
+  h1{
+    font-size:16px!important;
+    left:-15px!important;
+  }
+  p{
+    font-size:12px!important;
+    left:-20px!important;
+  }
+  #Me{
+    height: 200px !important;
+    width:120px !important;
+    margin-top:2% !important;
+    position:absolute;
+    left: 10% !important;
+  }
+  }
+  @media (min-width:992px){
+    
+    .h-Card{
+      height:600px !important;
+      width: 100% !important;
+    }
+    
+    h1{
+      font-size:48px!important;
+    }
+    p{
+      font-size:16px!important;
+    }
+    #Me{
+      width:300px;
+      height:670px;
+      position:absolute;
+      left:66%!important;
+      margin-top:-200px !important;
+  }}
+
+.About{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0;
+    backdrop-filter: blur(10px);
+    font-size:36!important;
+    width:100%;
+    padding:50px;
+    height:600px;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  #h{
+    margin-top:20px !important;
+    font-size:36!important;
+  }
+.progress-bar{
+    height: 100%;
+    background-color: #f9004d !important;
+    border-radius: 5px;
+   -webkit-animation: width 1500ms ease-in 1;
+    animation: progress 1500ms ease-in 1;
+  }
+  @keyframes progress{
+    from{
+      width:0;
+    }
+    to{
+      width:1;
+    }}
+  .Contact{
+   background: rgba( 255, 255, 255, 0.25 );
+   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+   backdrop-filter: blur( 14.5px );
+   -webkit-backdrop-filter: blur( 14.5px );
+   border-radius: 10px;
+  }

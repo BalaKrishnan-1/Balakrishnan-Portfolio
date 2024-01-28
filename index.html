@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="loading-wrapper"><div class="loading">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div></div>
+
+    <!---head section starts here--->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Balakrishnan.k</title>
+    <link rel="icon" type="image/x-icon" href="./img/BK Monogram Logo.jpeg" sizes="228x228">
+    <link rel="Stylesheet" href="./style.css">
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+    <link rel="Stylesheet" href="./Bootstrap/bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="./Bootstrap/jqery.min.js/jquery-3.7.1.min.js">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+    <!---Head section Ends Here--->
+<!--Navbar Starts here--->
+<nav class="navbar d-flex navbar-expand-lg navbar-light bg-white fixed-top sm-3 md-12 xs-4 gap-xs-3">
+<a class="navbar-brand text-body" href="./index.html"><img src="./img/BK Monogram Logo.jpeg"style="height:50px;width:40px;margin-top:-6px;"><span1>&nbsp;&nbsp;Bk <span style="color:#e30b5d">P</span>ortfolio</span1></a>
+<button class="navbar-toggler bg-dark"data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon text-light"></span>
+</button>
+<div id="my-nav" class="collapse navbar-collapse">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active">
+<a class="nav-link" href="#Home"><span class="sr-only"></span>Home</a>
+</li>
+<li class="nav-item"id="nav-item">
+<a class="nav-link" href="#About" tabindex="-1" aria-disabled="true">About</a>
+</li>
+<li class="nav-item"id="nav-item">
+<a class="nav-link" href="#Certificates" tabindex="-1" aria-disabled="true">Certificates</a>
+</li>
+<li class="nav-item"id="nav-item">
+<a class="nav-link" href="#Contact" tabindex="-1" aria-disabled="true">Contact</a>
+</li>
+</ul>
+</div>
+</nav>
+<body>
+<section id="Home">
+ <div class= "d-flex justify-content-sm-center Home">
+ <div class="container-fluid">
+<div class="h-Card d-flex-box col-md-12 col-lg-12 sm-12">
+<div class="row">
+<h1 class="d-flex justify-content-flex-start col-md-12 col-lg-12">Hii,Im Balakrishnan</h1></div>
+<div class="row">
+<p class="d-flex justify-content-flex-start col-lg-12">Im a Budding Web Developer From Thuvarankurichy,Trichy-district.<br>
+ Interested in IOT System,CyberSecurity,Ethical Hacking,Ai&ML,etc... </p>
+</div> 
+<img id="Me"src="./img/Bala.jpg"alt="Hero is here">
+</div>    
+</div>
+</div>
+ </div>
+</section>
+<section id="About">
+<div class= "d-flex  Abt">
+<div class="container-fluid">
+<div class="About d-grid col-md-12 col-lg-12 sm-12">
+    <div class="Skills d-grid mr-auto"> 
+        <div class="container-fluid">
+            <h2 id="h" style="display:flex;justify-content:space-between">Html
+                <span>100%</span></h2>
+                <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100" style="width:100%">
+    </div></div>
+    <h3 id="h" style="display:flex;justify-content:space-between;margin-top:20px;">CSS
+        <span>70%</span></h3>
+    <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="70"
+        aria-valuemin="0" aria-valuemax="100" style="width:70%"></div>
+</div>
+<h4 id="h" style="display:flex;justify-content:space-between;margin-top:20px;">Bootstrap
+    <span>25%</span></h4>
+<div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="70"
+    aria-valuemin="0" aria-valuemax="100" style="width:25%">
+</div>
+    </div>
+    </div>
+    </div>
+
+   
+      
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+<script>
+    const loadingwrapper=document.querySelector('.loading-wrapper');
+    
+    window.addEventListener('load',()=>{
+        loadingwrapper.style.opacity = '0';
+    
+        setTimeout(()=>{
+        loadingwrapper.style.display='none';
+    },25);
+    });
+</script>
+
+</html>
