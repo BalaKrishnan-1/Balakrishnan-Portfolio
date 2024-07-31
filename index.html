@@ -74,17 +74,34 @@
 </section>
 <section id="About">
   <div class="About">
-    <div class="row">
-    
-    </div>
-  </div>
+    <div class="row"id="Resume">
+<img id="madara" src="./img/Madara Eyes.jpeg">
+<audio id="madaraAudio" src="./img/wake-up-to-reality-madara-uchiha's-words-made-with-Voicemod.mp3"></audio>
+<img id="pain" src="./img/Pain Eyes.jpeg">
+<audio id="painAudio" src="./img/PainAudio.mp3"></audio>
+
+<script>
+    document.getElementById('madara').addEventListener('mouseenter', function() {
+        document.getElementById('madaraAudio').play();
+    });
+    document.getElementById('madara').addEventListener('mouseleave', function() {
+        document.getElementById('madaraAudio').pause();
+        document.getElementById('madaraAudio').currentTime = 0; // Reset to start
+    });
+    document.getElementById('pain').addEventListener('mouseenter', function() {
+        document.getElementById('painAudio').play();
+    });
+    document.getElementById('pain').addEventListener('mouseleave', function() {
+        document.getElementById('painAudio').pause();
+        document.getElementById('painAudio').currentTime = 0; // Reset to start
+    });
+</script>
 </section>
 </body>
 <button id="s-button" class="fa fa-arrow-circle-up" aria-hidden="true" onclick="scrollToTop()">    
 </button>
 <script>
     const loadingwrapper=document.querySelector('.loading-wrapper');
-    
     window.addEventListener('load',()=>{
         loadingwrapper.style.opacity = '0';
     
