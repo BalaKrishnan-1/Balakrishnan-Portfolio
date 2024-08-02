@@ -209,10 +209,10 @@
   p{
     padding-left: 30px !important;
   }
-  @media all,(min-width:600px) {
+  @media all,(min-width:600px){
   .h-Card{
       height:850px !important;
-      width: 100% !important;
+      min-width: 100% !important;
     }
   h1{
     font-size:36px!important;
@@ -227,7 +227,7 @@
     left:13%;
   }
   }
-  @media (max-width:580px){
+  @media (max-width:380px){
    
     .h-Card{
       height:850px !important;
@@ -247,31 +247,7 @@
     left:10px !important;
   }
   }
-  @media (max-width:475px){
-    .h-Card{
-      height:950px !important;
-      min-width:160% !important;
-      margin-left:-80px!important;
-    }
-  h1{
-    font-size:32px!important;
-    
-    align-items: center;
-  }
-  p{
-    font-size:18px!important;
-   
-    align-items: center;
-  }
-  #Me{
-    min-height: 290px !important;
-    min-width:200px !important;
-    margin-top:7% !important;
-    position:absolute;
-    padding:auto!important;
-    margin-left:-6%!important;
-  }
-  }
+ 
   @media all and (max-width:527px){
     #Me{
       min-height: 250px !important;
@@ -311,7 +287,46 @@
       left:66%!important;
       margin-top:-200px !important;
   }}
-  @media (max-width:440px),(max-width:200px){
+  @media only screen and (max-width:420px){
+   .h-Card{
+    max-height:750px !important;
+    max-width:100% !important;
+    margin-right:120px !important;
+    margin-left:-80px!important;
+   }
+   #Me{
+    height:500px !important;
+    width:250px!important;
+    margin-top:2% !important;
+    position:absolute;
+    left:20% !important;
+  }
+  h1{
+    font-size:12px!important;
+  }
+  p{
+    font-size:12px!important;
+  }
+  }
+  @media only screen and(max-width:540px) {
+    .h-Card{
+      height:950px !important;
+      min-width:180% !important;
+      margin-left:-80px!important;
+    }
+    #Me{
+      height:300px;
+      margin-top:2% !important;
+      position:absolute;
+      left:10% !important;
+    }
+    h1{
+      font-size:32px!important;
+    }
+  }
+
+    
+  @media (max-width:475px){
     .h-Card{
       height:950px !important;
       min-width:160% !important;
@@ -328,6 +343,17 @@
     }
     .About{
       height:600px !important;
+      min-width:150% !important;
+      margin-left:-80px!important;
+    }
+    .About #madara{
+      margin-left:-1px!important; 
+    }
+    .About #pain{
+      margin-left:-1px!important; 
+    }
+    .About #Resume{
+      margin-left:-20px!important;
     }
     p{
       font-size:18px!important;
