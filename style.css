@@ -240,20 +240,6 @@
   p{
     font-size:16px!important;
   }
-   .About{
-      height:600px !important;
-      min-width:150% !important;
-      margin-left:-80px!important;
-    }
-    .About #madara{
-      margin-left:-1px!important; 
-    }
-    .About #pain{
-      margin-left:-1px!important; 
-    }
-    .About #Resume{
-      margin-left:-20px!important;
-    }
   #Me{
     height:600px;
     margin-top:2% !important;
@@ -275,20 +261,6 @@
     }
     p{
       font-size:16px!important;
-    }
-   .About{
-      height:600px !important;
-      min-width:150% !important;
-      margin-left:-80px!important;
-    }
-    .About #madara{
-      margin-left:-1px!important; 
-    }
-    .About #pain{
-      margin-left:-1px!important; 
-    }
-    .About #Resume{
-      margin-left:-20px!important;
     }
     .h-Card{
       min-height:500px !important;
@@ -332,20 +304,6 @@
   h1{
     font-size:12px!important;
   }
-   .About{
-      height:600px !important;
-      min-width:150% !important;
-      margin-left:-80px!important;
-    }
-    .About #madara{
-      margin-left:-1px!important; 
-    }
-    .About #pain{
-      margin-left:-1px!important; 
-    }
-    .About #Resume{
-      margin-left:-20px!important;
-    }
   p{
     font-size:12px!important;
   }
@@ -355,20 +313,6 @@
       height:950px !important;
       min-width:180% !important;
       margin-left:-80px!important;
-    }
-   .About{
-      height:600px !important;
-      min-width:150% !important;
-      margin-left:-80px!important;
-    }
-    .About #madara{
-      margin-left:-1px!important; 
-    }
-    .About #pain{
-      margin-left:-1px!important; 
-    }
-    .About #Resume{
-      margin-left:-20px!important;
     }
     #Me{
       height:300px;
@@ -385,8 +329,8 @@
   @media (max-width:475px){
     .h-Card{
       height:950px !important;
-      min-width:160% !important;
-      margin-left:-80px!important;
+      min-width:250% !important;
+      margin-left:-100px!important;
     }
     #Me{
       height:600px;
@@ -399,7 +343,7 @@
     }
     .About{
       height:600px !important;
-      min-width:150% !important;
+      min-width:200% !important;
       margin-left:-80px!important;
     }
     .About #madara{
