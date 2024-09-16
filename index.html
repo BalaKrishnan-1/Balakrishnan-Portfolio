@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
     <title>Balakrishnan.k</title>
-    <link rel="icon" type="image/png" href="./img/BK Monogram Logo.jpeg" sizes="32x32">
+    <link rel="icon" type="image/png" class="favicon" href="./img/Bk Logo.png" sizes="192X192">
     <link rel="Stylesheet" href="./style.css">
     <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="Stylesheet" href="./Bootstrap/bootstrap-4.5.3-dist/css/bootstrap.min.css">
@@ -55,18 +55,17 @@
           </li>
           </ul></div></nav>
 <body>
-
-<section id="Home">
- <div class= "d-flex justify-content-sm-center Home">
+  <section id="Home">
+ <div class= "d-flex justify-content-sm-center   Home">
  <div class="container-fluid">
-<div class="h-Card d-flex-box col-md-12 col-lg-12 sm-12 ">
+<div class="h-Card d-flex-box col-md-12 col-lg-12 col-sm-8">
 <div class="row">
 <h1 class="d-flex justify-content-flex-start col-md-12 col-lg-12">Hii,Im Balakrishnan</h1></div>
 <div class="row">
 <p class="d-flex justify-content-flex-start col-lg-12">Im a Budding Web Developer From Thuvarankurichy,Trichy-district.<br>
  Interested in IOT System,CyberSecurity,Ethical Hacking,Ai&ML,etc... </p>
 </div> 
-<img id="Me"src="./img/Bala.jpg"alt="Hero is here">
+<img  id="Me"src="./img/Bala.jpg"alt="Hero is here">
 </div>    
 </div>
 </div>
@@ -79,7 +78,7 @@
 <audio id="madaraAudio" src="./img/wake-up-to-reality-madara-uchiha's-words-made-with-Voicemod.mp3"></audio>
 <img id="pain" src="./img/Pain Eyes.jpeg">
 <audio id="painAudio" src="./img/PainAudio.mp3"></audio>
-
+<audio id="rasingan" src="./img/naruto-voice-rasengan-made-with-Voicemod.mp3"></audio>
 <script>
     document.getElementById('madara').addEventListener('mouseenter', function() {
         document.getElementById('madaraAudio').play();
@@ -96,9 +95,11 @@
         document.getElementById('painAudio').currentTime = 0; // Reset to start
     });
 </script>
+
 </section>
 </body>
-<button id="s-button" class="fa fa-arrow-circle-up" aria-hidden="true" onclick="scrollToTop()">    
+
+<button id="s-button"><img src="./img/Minato_Namikaze_Rasengan_Goku_Naruto_Uzumaki_PNG_-_Free_Download-removebg-preview.png"  style ="width:90px;height:90px;" aria-hidden="true" onclick="scrollToTop()">    
 </button>
 <script>
     const loadingwrapper=document.querySelector('.loading-wrapper');
@@ -111,6 +112,8 @@
     });
      function scrollToTop() {
             $(window).scrollTop(0);
+             behavior: 'smooth'
+            document.getElementById('rasingan').play();
         }
 </script>
 </html>
