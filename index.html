@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <div class="loading-wrapper"><div class="loading">
     <span></span>
     <span></span>
@@ -10,9 +12,6 @@
 
     <!---head section starts here--->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <title>Balakrishnan.k</title>
     <link rel="icon" type="image/png" class="favicon" href="./img/Bk Logo.png" sizes="192X192">
     <link rel="Stylesheet" href="./style.css">
@@ -32,9 +31,9 @@
 </head>
     <!---Head section Ends Here--->
 <!--Navbar Starts here--->
-<nav class="navbar navbar-expand-lg  bg-body-tertiary">
+<nav class="navbar navbar-expand-lg col-md-12 col-lg-12 col-sm-12  bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand text-body" href="./index.html"><img src="./img/BK Monogram Logo.jpeg"style="height:50px;width:40px;margin-top:-6px;"><span1>&nbsp;&nbsp;Bk <span style="color:#e30b5d">P</span>ortfolio</span1></a>
+      <a class="navbar-brand text-body bg-white" href="./index.html"><img src="./img/BK Monogram Logo.jpeg"style="height:50px;width:40px;margin-top:-6px;"><span1 class="text-body">&nbsp;&nbsp;Bk <span style="color:#e30b5d">P</span>ortfolio</span1></a>
       <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04" aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
         <span class="fa fa-bars text-white"></span>
       </button>
@@ -78,7 +77,29 @@
 <audio id="madaraAudio" src="./img/wake-up-to-reality-madara-uchiha's-words-made-with-Voicemod.mp3"></audio>
 <img id="pain" src="./img/Pain Eyes.jpeg">
 <audio id="painAudio" src="./img/PainAudio.mp3"></audio>
+<img id="obito" src="./img/obito eyes.jpeg">
+<audio id="obitoAudio" src="./img/obito Audio(1).mp3"></audio>
 <audio id="rasingan" src="./img/naruto-voice-rasengan-made-with-Voicemod.mp3"></audio>
+<div class="paragraph">
+  <div class="column">
+    <div class="p1">
+      Bishop Heber College<br>
+      Bachelor of Computer Application(2022-2025)<br>
+      Trichy
+    </div>
+    <div class="p2 pt-3">
+      Sr.Vidhyalaya Matic HR.SEC School<br>
+      Higher Studies(2020-2022)<br>
+      Thuvarankurichy
+    </div>
+    <div class="p3 pt-3">
+      St.Antony's Matic HR.SEC School<br>
+      Schooling & 10th Grade(2008-2020)<br>
+      Thuvarankurichy
+    </div>
+  </div>
+  <img id="edu" src="./img/image_processing20190903-9617-134or1h.jpg">
+</div>
 <script>
     document.getElementById('madara').addEventListener('mouseenter', function() {
         document.getElementById('madaraAudio').play();
@@ -94,11 +115,16 @@
         document.getElementById('painAudio').pause();
         document.getElementById('painAudio').currentTime = 0; // Reset to start
     });
+    document.getElementById('obito').addEventListener('mouseenter', function() {
+        document.getElementById('obitoAudio').play();
+    });
+    document.getElementById('obito').addEventListener('mouseleave', function() {
+        document.getElementById('obitoAudio').pause();
+        document.getElementById('obitoAudio').currentTime = 0; // Reset to start
+    });
 </script>
-
 </section>
 </body>
-
 <button id="s-button"><img src="./img/Minato_Namikaze_Rasengan_Goku_Naruto_Uzumaki_PNG_-_Free_Download-removebg-preview.png"  style ="width:90px;height:90px;" aria-hidden="true" onclick="scrollToTop()">    
 </button>
 <script>
