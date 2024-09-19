@@ -67,9 +67,6 @@
     transform: scaleY(1);
    }
   }
-html,.navbar{
-  cursor: url('./img/Feather.svg')32 32, auto!important;
-}
   .navbar{
    background-color:rgba(255, 255,255,0.2);
    backdrop-filter: blur(10px);
@@ -130,16 +127,19 @@ html,.navbar{
   background-position: 100% 100%;
   }
   
-  nav-brand{
+  .nav-brand{
   font-family: 'Josefin Sans', sans-serif;
   font-size:24px;
   font-weight:bolder;
-   
   }
-
-  nav-brand span1{
+  .nav-brand:active{
+    background-color: #fff!important;
+    color:#000!important;
+  }
+  .nav-brand span1{
    font-size: 48px;
    margin-top:2px;
+   cursor: default;
    font-family: 'Josefin Sans', sans-serif;
   }
   #Home{
@@ -247,6 +247,7 @@ html,.navbar{
   .About #madara{
     margin-left:-1px!important; 
   }
+  
   .About #pain{
     margin-left:-1px!important; 
   }
@@ -270,6 +271,9 @@ html,.navbar{
     position:absolute;
     left:10px !important;
   }
+  #edu{
+    display: none!important;
+   }
   }
  
   @media all and (max-width:527px){
@@ -315,16 +319,34 @@ html,.navbar{
       position:absolute;
       left:66%!important;
       margin-top:-200px !important;
-  }}
+  }
+  .About{
+    height:600px !important;
+    min-width:100% !important;
+    left:66%!important;
+  }
+  .About #madara{
+    margin-left:-1px!important; 
+  }
+  .About #pain{
+    margin-left:-1px!important; 
+  }
+  .About #obito{
+    margin-left:-1px!important; 
+  }
+  .About #Resume{
+    margin-left:-10px!important;
+  }
+  }
   @media only screen and (max-width:420px){
     .h-Card{
-     max-height:750px !important;
-     max-width:100% !important;
+     height:750px !important;
+     min-width:100% !important;
      margin-right:120px !important;
      margin-left:-80px!important;
     }
     .navbar{
-     min-width: 100% !important;
+     min-width:150% !important;
     }
     #Me{
      height:500px !important;
@@ -332,6 +354,18 @@ html,.navbar{
      margin-top:2% !important;
      position:absolute;
      left:20% !important;
+   }
+   .About{
+    height:600px !important;
+    min-width:100% !important;
+    left:66%!important;
+  }
+   #edu{
+    left:52%!important;
+      top:-13%!important;
+      position: absolute;
+      height:550px!important;
+      width:670px!important;
    }
    h1{
      font-size:12px!important;
@@ -343,7 +377,7 @@ html,.navbar{
      margin-left:70%!important;
    }
    }
-  @media only screen and(max-width:540px) {
+  @media only screen and(max-width:767px) {
     .h-Card{
       height:950px !important;
       min-width:180% !important;
@@ -359,13 +393,17 @@ html,.navbar{
       font-size:32px!important;
     }
   }
-
+@media (max-width:1300px){
+  #edu{
+    display: none!important;
+  }
+}
     
   @media (max-width:475px){
     .h-Card{
       height:950px !important;
       min-width:240% !important;
-      margin-left:-100px!important;
+      margin-left:-90px!important;
     }
     .navbar{
       min-width: 100%!important;
@@ -380,7 +418,7 @@ html,.navbar{
       font-size:32px!important;
     }
     .About{
-      height:600px !important;
+      min-height:900px !important;
       min-width:200% !important;
       margin-left:-80px!important;
     }
@@ -390,8 +428,17 @@ html,.navbar{
     .About #pain{
       margin-left:-1px!important; 
     }
+    .About #obito{
+      margin-left:-1px!important; 
+    }
     .About #Resume{
       margin-left:-20px!important;
+    }
+    #edu{
+     display: none!important;
+    }
+    #s-button{
+      margin-left:70%!important;
     }
     p{
       font-size:18px!important;
@@ -414,7 +461,7 @@ html,.navbar{
   border-radius: 100%;
   position: Absolute !important;
   left:-18px;
-  top: -8px;
+  top: -3px;
 }
 .About #pain{
   height:36px;
@@ -422,7 +469,15 @@ html,.navbar{
   border-radius: 100%;
   position: Absolute !important;
   left:-18px;
-  top: 150px;
+  top: 122px;
+}
+.About #obito{
+  height:36px;
+  width:36px;
+  border-radius: 100%;
+  position: Absolute !important;
+  left:-18px;
+  top: 247px;
 }
 .About #Resume{
   padding: 0 0 20px 20px;
@@ -437,6 +492,7 @@ html,.navbar{
     padding-top:90px;
     padding-left:-5px;
   }
+
   @media all and (max-width:640px){
     .About h2 ,.About h3 ,.About h4,.About h5,.About h6{
       display: block;
@@ -474,6 +530,17 @@ html,.navbar{
     }
     #s-button:target{
       -webkit-border-before-color: transparent!important;
+    }
+    .paragraph{
+      font-family: 'Josefin Sans', sans-serif;
+      font-size:24px;
+    }
+    #edu{
+      left:52%!important;
+      top:-13%!important;
+      position: absolute;
+      height:550px!important;
+      width:670px!important;
     }
   .Contact{
    background: rgba( 255, 255, 255, 0.25 );
