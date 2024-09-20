@@ -419,7 +419,7 @@
       font-size:32px!important;
     }
     .About{
-      min-height:900px !important;
+      min-height:800px !important;
       min-width:200% !important;
       margin-left:-80px!important;
     }
@@ -431,17 +431,23 @@
       margin-left:-1px!important; 
     }
     .About #obito{
-      top: 520px !important;
+      top: 540px !important;
       margin-left:-1px!important; 
     }
-    .About #itachi{
-      top:500px!important;
-    }
     .About #Resume{
+      height:900px!important;
       margin-left:-20px!important;
     } 
     .column{
-      font-size: 24px!important;
+      font-size:21px!important;
+    }
+    .column #Hscl{
+      margin-top:100px!important;
+      font-size:21px!important;
+    }
+    .column #scl{
+      margin-top:125px!important;
+      font-size:21!important;
     }
     #edu{
      display: none!important;
