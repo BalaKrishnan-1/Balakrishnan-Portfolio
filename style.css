@@ -237,7 +237,6 @@
     border-left: 2px solid rgb(213, 213, 213);
     position:relative;
     margin-left: -20px !important;
-    ;
   }
   .About{
     height:600px !important;
@@ -247,7 +246,6 @@
   .About #madara{
     margin-left:-1px!important; 
   }
-  
   .About #pain{
     margin-left:-1px!important; 
   }
@@ -267,6 +265,7 @@
   }
   #Me{
     height:600px;
+
     margin-top:2% !important;
     position:absolute;
     left:10px !important;
@@ -299,7 +298,19 @@
       height:600px !important;
       min-width:150% !important;
       margin-left:-80px!important;
-    }}
+    }
+    .About #madara{
+      margin-left:-1px!important; 
+    }
+    .About #pain{
+      top:160px!important;
+      margin-left:-1px!important; 
+    }
+    .About #obito{
+      top:320px!important;
+      margin-left:-1px!important; 
+    }
+  }
   @media (min-width:992px){
     
     .h-Card{
@@ -337,6 +348,7 @@
   .About #Resume{
     margin-left:-10px!important;
   }
+  
   }
   @media only screen and (max-width:420px){
     .h-Card{
@@ -361,7 +373,7 @@
     left:66%!important;
   }
    #edu{
-    left:52%!important;
+      left:52%!important;
       top:-13%!important;
       position: absolute;
       height:550px!important;
@@ -426,13 +438,21 @@
       margin-left:-1px!important; 
     }
     .About #pain{
+      top: 270px !important;
       margin-left:-1px!important; 
     }
     .About #obito{
+      top: 520px !important;
       margin-left:-1px!important; 
+    }
+    .About #itachi{
+      top:500px!important;
     }
     .About #Resume{
       margin-left:-20px!important;
+    } 
+    .column{
+      font-size: 24px!important;
     }
     #edu{
      display: none!important;
@@ -479,6 +499,14 @@
   left:-18px;
   top: 247px;
 }
+.About #itachi{
+  height:36px;
+  width:36px;
+  border-radius: 100%;
+  position: Absolute !important;
+  left:-18px;
+  top:520px;
+}
 .About #Resume{
   padding: 0 0 20px 20px;
   margin-top: 10px;
@@ -500,7 +528,7 @@
     }
     .About{
       width:100% !important;
-    padding:50px !important;
+      padding:50px !important;
       height:600px !important;
     }
   }
