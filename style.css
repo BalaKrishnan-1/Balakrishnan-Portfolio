@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,400&family=Lora:ital,wght@0,600;1,500&family=Oswald:wght@400;500&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,600;1,400&family=Lora:ital,wght@0,600;1,500&family=Oswald:wght@400;500&display=swap');
 .loading-wrapper{
    background-color: #fff;
    position: fixed;
@@ -145,14 +145,11 @@
   #Home{
     padding-top:50px;
   }
-  #Skill-Section{
-    padding-top:150px;
-  }
   .Home{
     margin:100px;
     padding-top:-90px;
   }
-  .h-Card,.About{
+  .h-Card,.About,.Certification{
     -webkit-animation: fade-in-fwd 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             animation: fade-in-fwd 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
@@ -249,6 +246,10 @@
   .About #pain{
     margin-left:-1px!important; 
   }
+  .Certification{
+    width:100%;
+    height:900px!important;
+  }
   }
   @media (max-width:380px){
    
@@ -265,7 +266,6 @@
   }
   #Me{
     height:600px;
-
     margin-top:2% !important;
     position:absolute;
     left:10px !important;
@@ -298,6 +298,10 @@
       height:600px !important;
       min-width:150% !important;
       margin-left:-80px!important;
+    }
+    .Certification{
+      width:100%;
+      height:900px!important;
     }
   }
   @media (min-width:992px){
@@ -337,7 +341,6 @@
   .About #Resume{
     margin-left:-10px!important;
   }
-  
   }
   @media only screen and (max-width:420px){
     .h-Card{
@@ -368,6 +371,10 @@
       height:550px!important;
       width:670px!important;
    }
+   .Certification{
+    width:100%!important;
+    height:900px!important;
+  }
    h1{
      font-size:12px!important;
    }
@@ -393,13 +400,27 @@
     h1{
       font-size:32px!important;
     }
+    .Certification{
+      width:100%;
+      height:900px!important;
+    }
   }
 @media (max-width:1300px){
   #edu{
     display: none!important;
   }
 }
-    
+@media all and (max-width:640px){
+  .About h2 ,.About h3 ,.About h4,.About h5,.About h6{
+    display: block;
+    font-size: 12px !important;
+  }
+  .About{
+    width:100% !important;
+    padding:50px !important;
+    height:600px !important;
+  }
+}
   @media (max-width:475px){
     .h-Card{
       height:950px !important;
@@ -452,6 +473,24 @@
     #edu{
      display: none!important;
     }
+    .Certification{
+      min-width:200%!important;
+      margin-left:-80px!important;
+      height:900px!important;
+      scroll-behavior: smooth;
+      overflow-y: scroll!important;
+    }
+    .img{
+      align-items: center!important;
+      justify-content: center!important;
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      top: 150px !important;
+      width: 80%;
+      max-width: 700px;
+  }
     #s-button{
       margin-left:70%!important;
     }
@@ -510,27 +549,86 @@
   border-left: 2px solid rgb(213, 213, 213);
   position:relative;
 }
-  #About{
-    margin:100px;
-    padding-top:90px;
-    padding-left:-5px;
+#About{
+  margin:100px;
+  padding-top:90px;
+  padding-left:-5px;
+}
+#Certification{
+  margin:100px;
+  padding-top:90px;
+  padding-left:-5px;
+}
+.img{
+  gap:25px;
+}
+#img{
+  width:200px;
+  height:150px;
+  transition: transform 0.3s ease;
+}
+  .Certification{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0;
+    backdrop-filter: blur(10px);
+    width:100%;
+    padding:50px;
+    height:600px;
+    overflow: hidden;
+    border-radius: 20px;
   }
+  .thumbnail {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
 
-  @media all and (max-width:640px){
-    .About h2 ,.About h3 ,.About h4,.About h5,.About h6{
-      display: block;
-      font-size: 12px !important;
-    }
-    .About{
-      width:100% !important;
-      padding:50px !important;
-      height:600px !important;
-    }
-  }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position:fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    top:50px;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
   h2,h3,h4,h5,h6{
     font-size: 3em!important;
   }
   .About{
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0;
+    backdrop-filter: blur(10px);
+    font-size:36!important;
+    width:100%;
+    padding:50px;
+    height: 600px !important;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  .Certification{
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 8px 32px 0;
     backdrop-filter: blur(10px);
