@@ -22,7 +22,6 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="./js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -46,7 +45,7 @@
             <a class="nav-link" href="#About">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Certification</a>
+            <a class="nav-link" href="#Certification">Certification</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -78,7 +77,7 @@
 <audio id="painAudio" src="./img/PainAudio.mp3"></audio>
 <img id="obito" src="./img/obito eyes.jpeg">
 <audio id="obitoAudio" src="./img/obito Audio(1).mp3"></audio>
-<audio id="rasingan" src="./img/naruto-voice-rasengan-made-with-Voicemod.mp3"></audio>
+<audio id="rasingan" src="./img/naruto-voice-rasengan-made-with-Voicemod (1).mp3"></audio>
 <div class="paragraph">
   <div class="column">
     <div class="p1">
@@ -98,8 +97,54 @@
     </div>
   </div>
   <img id="edu" src="./img/image_processing20190903-9617-134or1h.jpg">
+</div></section>
+<section id="Certification">
+  <div class="d-grid justify-content-sm-center  Certification">
+    <div class="row img">
+      <img class="thumbnail" src="./img/Coursera- Dveloping Websites And Front-Ends with Bootstrap_page-0001.jpg" id="img" alt="Bootstrap_Certificate">
+      <img class="thumbnail" src="./img/Meta-Javascript_page-0001.jpg"  id="img" alt="JS">
+      <img class="thumbnail" src="./img/Using MongoDB with NodeJs_page-0001.jpg" id="img" alt="MongoDB">
+      <img class="thumbnail" src="./img/Generative AI Fundamentals.png" id="img" alt="Generative_AI">
+      <img class="thumbnail" src="./img/Generative AI.png" id="img" alt="Generative_AI">
+      <img class="thumbnail" src="./img/Introduction to Large Language Models.png" id="img" alt="LLM">
+      <img class="thumbnail" src="./img/Introduction to Responsible AI.png" id="img" alt="Responsible_AI">
+      <img class="thumbnail" src="./img/Practitioner.jpg" id="img" alt="Practitioner">
+      <img class="thumbnail" src="./img/TeamEssential AI.jpg" id="img" alt="Team Essential Ai">
+
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
 </div>
+</section>
 <script>
+   const modal = document.getElementById('myModal');
+   const modalImg = document.getElementById('modalImage');
+        
+        // Get all thumbnail images
+   const thumbnail = document.querySelectorAll('.thumbnail');
+
+// Get the <span> element that closes the modal
+   const closeButton = document.querySelector('.close');
+
+// When the user double-clicks the image
+thumbnail.forEach(function(img) {
+  img.ondblclick = function () {
+    modal.style.display = 'block';  // Show the modal
+    modalImg.src = this.src;        // Set the modal image to the same src as the thumbnail
+};
+});
+// When the user clicks on the close button (x), close the modal
+closeButton.onclick = function () {
+    modal.style.display = 'none';
+};
+// Close the modal when user clicks anywhere outside the image
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = 'none';
+    }
+};
     document.getElementById('madara').addEventListener('mouseenter', function() {
         document.getElementById('madaraAudio').play();
     });
@@ -122,7 +167,7 @@
         document.getElementById('obitoAudio').currentTime = 0; // Reset to start
     });
 </script>
-</section>
+
 </body>
 <button id="s-button"><img src="./img/Minato_Namikaze_Rasengan_Goku_Naruto_Uzumaki_PNG_-_Free_Download-removebg-preview.png"  style ="width:90px;height:90px;" aria-hidden="true" onclick="scrollToTop()">    
 </button>
