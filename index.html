@@ -218,7 +218,7 @@ window.onclick = function (event) {
                 email: email,
                 message: message
             };
-            const baseURL = process.env.NODE_ENV === 'https://balakrishnan-1.github.io/Balakrishnan-Portfolio/'; 
+            const baseURL = process.env.NODE_ENV === 'https://balakrishnan-1.github.io/Balakrishnan-Portfolio/#'; 
             // Send the data to the backend (Node.js server)
             fetch('${baseURL}/submit-form', {
                 method: 'POST',
