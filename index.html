@@ -219,30 +219,27 @@ window.onclick = function (event) {
                 email: email,
                 message: message
             };
-            const baseURL = 'https://balakrishnan-1.github.io/Balakrishnan-Portfolio/';  // Change to your actual production URL
-
-
-
 // Send the data to the backend (Node.js server)
-fetch(`${baseURL}/submit-form`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
-})
-.then(response => {
-    if (response.ok) {
-        document.getElementById('form-status').textContent = 'Message sent successfully!';
-        document.getElementById('contact-form').reset();
-    } else {
-        document.getElementById('form-status').textContent = 'Error sending message!';
-    }
-})
-.catch(error => {
-    document.getElementById('form-status').textContent = 'Error sending message!';
-    console.error('Error:', error);
-});
+ fetch('https://balakrishnan-1.github.io/Balakrishnan-Portfolio/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('form-status').textContent = 'Message sent successfully!';
+                    document.getElementById('contact-form').reset();
+                } else {
+                    document.getElementById('form-status').textContent = 'Error sending message!';
+                }
+            })
+            .catch(error => {
+                document.getElementById('form-status').textContent = 'Error sending message!';
+                console.error('Error:', error);
+            });
         });
+
 </script>
 </html>
