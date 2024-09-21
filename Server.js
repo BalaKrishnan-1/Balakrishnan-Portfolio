@@ -12,11 +12,11 @@ app.use(cors());             // Allow cross-origin requests
 
 // MongoDB Connection
 const dbURI = 'mongodb+srv://Balakrishnan:Bala254269@cluster0.ylgoi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';  // MongoDB Cluster Connection String
-
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(dbURI)  // Simply pass the URI without the deprecated options
     .then(() => console.log('MongoDB connected...'))
-    .catch(err => console.log(err));
+    .catch(err => console.log('Connection error: ', err));
 
+    
 // Define a Mongoose schema for the form data
 const formSchema = new mongoose.Schema({
     name: String,
