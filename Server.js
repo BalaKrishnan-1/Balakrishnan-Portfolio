@@ -8,10 +8,12 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());  // Parse JSON bodies
-app.use(cors({
-    origin: 'https://balakrishnan-1.github.io'
-}));
+const corsoptions ={
+    origin: 'https://balakrishnan-1.github.io',
+    optionsSuccessStatus:200
+};
 
+app.use(cors(corsoptions));
 // MongoDB Connection
 const dbURI = 'mongodb+srv://Balakrishnan:Bala254269@cluster0.ylgoi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';  // MongoDB Cluster Connection String
 mongoose.connect(dbURI)  // Simply pass the URI without the deprecated options
