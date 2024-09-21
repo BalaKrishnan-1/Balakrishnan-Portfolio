@@ -48,9 +48,7 @@ app.post('/submit-form', async (req, res) => {
         res.status(500).send('Error saving form data.');
     }
 });
-
-// Start the Express server
-const PORT = process.env.baseURL
-app.listen(baseURL, () => {
-    console.log(`Server running on baseURL${baseURL}`);
+const PORT = process.env.PORT || 5000;  
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
