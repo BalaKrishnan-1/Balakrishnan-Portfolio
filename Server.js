@@ -8,7 +8,8 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());  // Parse JSON bodies
-app.use(cors());             // Allow cross-origin requests
+app.use(cors());
+app.use(express.jason());             // Allow cross-origin requests
 
 // MongoDB Connection
 const dbURI = 'mongodb+srv://Balakrishnan:Bala254269@cluster0.ylgoi.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';  // MongoDB Cluster Connection String

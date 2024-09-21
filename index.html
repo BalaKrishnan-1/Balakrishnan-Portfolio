@@ -123,7 +123,7 @@
 <section id="Contact">
   <div class="Contact">
     <div class="row">
-      <form id="contact-form"  action="/action_page.php">
+      <form id="contact-form">
         <label for="name">First Name</label>
         <input type="text" id="name" name="firstname" placeholder="Your name" required> 
         <label for="email">Gmail Id</label>
@@ -203,8 +203,9 @@ window.onclick = function (event) {
             $(window).scrollTop(0);
              behavior: 'smooth'
             document.getElementById('rasingan').play();
-        }
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        }</script>
+        <script>
+        document.getElementById('contact-form').addEventListener('submit',function(event) {
             event.preventDefault(); // Prevent form from submitting the traditional way
             
             // Get form values
@@ -218,29 +219,31 @@ window.onclick = function (event) {
                 email: email,
                 message: message
             };
-            const baseURL = process.env.NODE_ENV === 'production' 
-    ? 'https://balakrishnan-1.github.io/Balakrishnan-Portfolio'  // Production URL
-    : 'http://localhost:5000';  // Local development URL
-            // Send the data to the backend (Node.js server)
-            fetch('${baseURL}/submit-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('form-status').textContent = 'Message sent successfully!';
-                    document.getElementById('contact-form').reset();
-                } else {
-                    document.getElementById('form-status').textContent = 'Error sending message!';
-                }
-            })
-            .catch(error => {
-                document.getElementById('form-status').textContent = 'Error sending message!';
-                console.error('Error:', error);
-            });
-        });
+
+            const baseURL = window.location.hostname === 'localhost'
+    ? 'http://localhost:5000'  // Local development URL
+    : 'https://balakrishnan-1.github.io/Balakrishnan-Portfolio';  // Production URL
+
+
+// Send the data to the backend (Node.js server)
+fetch(`${baseURL}/submit-form`, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => {
+    if (response.ok) {
+        document.getElementById('form-status').textContent = 'Message sent successfully!';
+        document.getElementById('contact-form').reset();
+    } else {
+        document.getElementById('form-status').textContent = 'Error sending message!';
+    }
+})
+.catch(error => {
+    document.getElementById('form-status').textContent = 'Error sending message!';
+    console.error('Error:', error);
+});
 </script>
 </html>
