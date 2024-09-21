@@ -48,7 +48,7 @@
             <a class="nav-link" href="#Certification">Certification</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#Contact">Contact</a>
           </li>
           </ul></div></nav>
 <body>
@@ -108,15 +108,34 @@
       <img class="thumbnail" src="./img/Generative AI.png" id="img" alt="Generative_AI">
       <img class="thumbnail" src="./img/Introduction to Large Language Models.png" id="img" alt="LLM">
       <img class="thumbnail" src="./img/Introduction to Responsible AI.png" id="img" alt="Responsible_AI">
+      <img class="thumbnail" src="./img/Applying AI Principles with Google Cloud.png" id="img" alt="Principle of AI in Google Cloud">
+      <img class="thumbnail" src="./img/DeepLearning.TV ML0115EN Certificate _ Cognitive Class_page-0001.jpg" id="img" alt="Deep Learning">
       <img class="thumbnail" src="./img/Practitioner.jpg" id="img" alt="Practitioner">
       <img class="thumbnail" src="./img/TeamEssential AI.jpg" id="img" alt="Team Essential Ai">
-
+      <img class="thumbnail" src="./img/1703861742719_Balakrishnan K Internship Certificate_page-0001.jpg" id="img" alt="Industry-4.0">
     </div>
   </div>
   <div id="myModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImage">
 </div>
+</section>
+<section id="Contact">
+  <div class="Contact">
+    <div class="row">
+      <form id="contact-form"  action="/action_page.php">
+        <label for="name">First Name</label>
+        <input type="text" id="name" name="firstname" placeholder="Your name" required> 
+        <label for="email">Gmail Id</label>
+        <input type="text" id="email" name="Gmail" placeholder="Your Gmail Id" required>
+        <label for="message">Subject</label>
+    <textarea id="message" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+    <input type="submit" value="Submit">
+  </form>    
+    </div>
+    <p id="form-status"></p>
+  </div>
+
 </section>
 <script>
    const modal = document.getElementById('myModal');
@@ -185,5 +204,41 @@ window.onclick = function (event) {
              behavior: 'smooth'
             document.getElementById('rasingan').play();
         }
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Prepare the payload
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Send the data to the backend (Node.js server)
+            fetch('http://localhost:5000/submit-form', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('form-status').textContent = 'Message sent successfully!';
+                    document.getElementById('contact-form').reset();
+                } else {
+                    document.getElementById('form-status').textContent = 'Error sending message!';
+                }
+            })
+            .catch(error => {
+                document.getElementById('form-status').textContent = 'Error sending message!';
+                console.error('Error:', error);
+            });
+        });
 </script>
 </html>
