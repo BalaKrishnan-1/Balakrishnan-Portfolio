@@ -149,7 +149,7 @@
     margin:100px;
     padding-top:-90px;
   }
-  .h-Card,.About,.Certification{
+  .h-Card,.About,.Certification,.Contact{
     -webkit-animation: fade-in-fwd 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
             animation: fade-in-fwd 4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
@@ -247,8 +247,15 @@
     margin-left:-1px!important; 
   }
   .Certification{
-    width:100%;
+    min-width:100%!important;
+    left:14%!important;
     height:900px!important;
+    scroll-behavior: smooth;
+    overflow-y: scroll!important;
+  }
+  .img{
+    align-items: center!important;
+    justify-content: center!important;
   }
   }
   @media (max-width:380px){
@@ -273,6 +280,17 @@
   #edu{
     display: none!important;
    }
+   .Certification{
+    min-width:200%!important;
+    margin-left:-80px!important;
+    height:900px!important;
+    scroll-behavior: smooth;
+    overflow-y: scroll!important;
+  }
+  .img{
+    align-items: center!important;
+    justify-content: center!important;
+  }
   }
  
   @media all and (max-width:527px){
@@ -300,9 +318,23 @@
       margin-left:-80px!important;
     }
     .Certification{
-      width:100%;
+      min-width:150%!important;
+      margin-left:-80px!important;
       height:900px!important;
+      scroll-behavior: smooth;
+      overflow-y: scroll!important;
     }
+    .img{
+      align-items: center!important;
+      justify-content: center!important;
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      top: 150px !important;
+      width: 80%;
+      max-width: 700px;
+  }
   }
   @media (min-width:992px){
     
@@ -372,9 +404,26 @@
       width:670px!important;
    }
    .Certification{
-    width:100%!important;
+    min-width:200%!important;
+    margin-left:-80px!important;
     height:900px!important;
+    scroll-behavior: smooth;
+    overflow-y: scroll!important;
   }
+  .img{
+    align-items: center!important;
+    justify-content: center!important;
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    top: 150px !important;
+    width: 80%;
+    max-width: 700px;
+}
+.Contact{
+  min-width:200%!important;
+}
    h1{
      font-size:12px!important;
    }
@@ -401,9 +450,23 @@
       font-size:32px!important;
     }
     .Certification{
-      width:100%;
+      min-width:200%!important;
+      margin-left:-80px!important;
       height:900px!important;
+      scroll-behavior: smooth;
+      overflow-y: scroll!important;
     }
+    .img{
+      align-items: center!important;
+      justify-content: center!important;
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      top: 150px !important;
+      width: 80%;
+      max-width: 700px;
+  }
   }
 @media (max-width:1300px){
   #edu{
@@ -491,6 +554,15 @@
       width: 80%;
       max-width: 700px;
   }
+  .Contact{
+    min-width:200%!important;
+    margin-left:-80px!important;
+  }
+  #form-status{
+    margin-top:15px!important;
+    font-size: 16px!important;
+    margin-left:-20px!important;
+  }
     #s-button{
       margin-left:70%!important;
     }
@@ -554,13 +626,25 @@
   padding-top:90px;
   padding-left:-5px;
 }
-#Certification{
+#Certification,#Contact{
   margin:100px;
   padding-top:90px;
   padding-left:-5px;
 }
+.Contact{
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0;
+  backdrop-filter: blur(10px);
+  width:100%;
+  padding:50px;
+  height:600px;
+  overflow: hidden;
+  border-radius: 20px;
+}
 .img{
-  gap:25px;
+  gap:45px;
+  justify-content: center;
+  align-items: center;
 }
 #img{
   width:200px;
@@ -663,10 +747,25 @@
       height:550px!important;
       width:670px!important;
     }
-  .Contact{
-   background: rgba( 255, 255, 255, 0.25 );
-   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-   backdrop-filter: blur( 14.5px );
-   -webkit-backdrop-filter: blur( 14.5px );
-   border-radius: 10px;
-  }
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
