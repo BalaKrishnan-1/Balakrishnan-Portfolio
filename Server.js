@@ -50,7 +50,7 @@ app.post('/submit-form', async (req, res) => {
 });
 
 // Start the Express server
-const PORT = process.env.NODE_ENV
-app.listen(NODE_ENV, () => {
-    console.log(`Server running on port ${NODE_ENV}`);
+const PORT = process.env.baseURL
+app.listen(baseURL, () => {
+    console.log(`Server running on baseURL${baseURL}`);
 });
