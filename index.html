@@ -128,7 +128,7 @@
         <input type="text" id="email" name="Gmail" placeholder="Your Gmail Id" required>
         <label for="message">Subject</label>
     <textarea id="message" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-    <input type="submit" value="Submit">
+    <input oncick="sendemail()" type="submit" value="Submit">
   </form>    
     </div>
     <p id="form-status"></p>
@@ -203,38 +203,34 @@ window.onclick = function (event) {
             document.getElementById('rasingan').play();
         }
         </script>
-         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
          <script type="text/javascript">
-             (function(){
-                 // Initialize EmailJS with your user ID
-                 emailjs.init("Gavb0ITxTc2LrtUck");
-             })();
+           (function() {
+           emailjs.init("Gavb0ITxTc2LrtUck");
+           })(); 
      
-             document.getElementById('contact-form').addEventListener('submit', function(event) {
-                 event.preventDefault(); // Prevent the default form submission behavior
-                 
-                 // Get form values
-                 const name = document.getElementById('name').value;
-                 const email = document.getElementById('email').value;
-                 const message = document.getElementById('message').value;
-                 
-                 // Prepare email params
-                 const params = {
-                     from_name: name,
-                     from_email: email,
-                     message: message
-                 };
-                 
-                 // Send email using EmailJS
-                 emailjs.send("service_wzr0vfr", "template_knmdhgj", params)
-                     .then(function(response) {
-                         document.getElementById('form-status').textContent = "Message sent successfully!";
-                         document.getElementById('contact-form').reset();
-                     }, function(error) {
-                         document.getElementById('form-status').textContent = "Failed to send message!";
-                         console.log('FAILED...', error);
-                     });
-             });</script>
+           function sendemail(){
+
+var email=document.getElementById("email").value;
+var from_name=document.getElementById("name").value;
+var message=document.getElementById("message").value;
+
+var templateParams = {
+      email: email,
+      to_name:name,
+      message: message
+    };
+
+    emailjs.send('service_wzr0vfr', 'template_knmdhgj', templateParams)
+.then(function(response) {
+   console.log('SUCCESS!', response.status, response.text);
+   window.alert("Sent successfully!");
+   
+})
+
+   
+}
+              </script>
 <footer class="footer col-lg-12 col-sm-4 col-md-12"id="footer">
   <p id="rights">All Copy@Rights Reserved By Balakrishnan K</p>
   <div class="row icon"> 
