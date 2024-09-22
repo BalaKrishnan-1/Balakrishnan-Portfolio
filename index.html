@@ -13,14 +13,12 @@
     <!---head section starts here--->
 <head>
     <title>Balakrishnan.k</title>
-    <link rel="icon" type="image/png" class="favicon" href="./img/BK Monogram Logo.jpeg" sizes="32x32">
+    <link rel="icon" type="image/png" class="favicon" href="./img/Bk Logo.png" sizes="192X192">
     <link rel="Stylesheet" href="./style.css">
     <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
     <link rel="Stylesheet" href="./Bootstrap/bootstrap-4.5.3-dist/css/bootstrap.min.css">
     <link rel="Stylesheet" href="./Bootstrap/jqery.min.js/jquery-3.7.1.min.js">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="./js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -123,7 +121,7 @@
 <section id="Contact">
   <div class="Contact">
     <div class="row">
-      <form id="contact-form">
+      <form id="contact-form"  action="/action_page.php">
         <label for="name">First Name</label>
         <input type="text" id="name" name="firstname" placeholder="Your name" required> 
         <label for="email">Gmail Id</label>
@@ -133,7 +131,7 @@
     <input type="submit" value="Submit">
   </form>    
     </div>
-    <p id="form-status" method="POST"></p>
+    <p id="form-status"></p>
   </div>
 
 </section>
@@ -203,9 +201,8 @@ window.onclick = function (event) {
             $(window).scrollTop(0);
              behavior: 'smooth'
             document.getElementById('rasingan').play();
-        }</script>
-        <script>
-        document.getElementById('contact-form').addEventListener('submit',function(event) {
+        }
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent form from submitting the traditional way
             
             // Get form values
@@ -219,8 +216,24 @@ window.onclick = function (event) {
                 email: email,
                 message: message
             };
-// Send the data to the backend (Node.js server)
- fetch('https://balakrishnan-1.github.io/Balakrishnan-Portfolio/submit-form', {
+
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Prepare the payload
+            const data = {
+                name: name,
+                email: email,
+                message: message
+            };
+
+            // Send the data to the backend (Node.js server)
+            fetch('http://localhost:5000/submit-form', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -239,7 +252,16 @@ window.onclick = function (event) {
                 document.getElementById('form-status').textContent = 'Error sending message!';
                 console.error('Error:', error);
             });
-        });
-
+        }); })
 </script>
+<footer class="footer col-lg-12 col-sm-4 col-md-12"id="footer">
+  <p id="rights">All Copy@Rights Reserved By Balakrishnan K</p>
+  <div class="row icon"> 
+   <a id="i-1" class="fa fa-instagram fa-2x" href="https://www.instagram.com/balakrishnan_the_introvert/"></a>
+   <a id="i-2" class="fa fa-facebook fa-2x"  href="https://www.facebook.com/profile.php?id=100054672639108"></a>
+   <a id="i-3" class="fa fa-solid fa-envelope fa-2x" href="mailto:bk4922813@gmail.com"></a>
+   <a id="i-4" class="fa fa-linkedin fa-2x" href="www.linkedin.com/in/balakrishnan-k-316455296"></a>
+   <a id="i-5" class="fa fa-github fa-2x"  href="https://github.com/BalaKrishnan-1/Profile"></a>
+  </div>
+</footer>
 </html>
