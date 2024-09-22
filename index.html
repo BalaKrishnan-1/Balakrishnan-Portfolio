@@ -202,58 +202,39 @@ window.onclick = function (event) {
              behavior: 'smooth'
             document.getElementById('rasingan').play();
         }
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting the traditional way
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Prepare the payload
-            const data = {
-                name: name,
-                email: email,
-                message: message
-            };
-
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from submitting the traditional way
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Prepare the payload
-            const data = {
-                name: name,
-                email: email,
-                message: message
-            };
-
-            // Send the data to the backend (Node.js server)
-            fetch('https://k-balakrishnan-portfolio.netlify.app/submit-form', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-  },
-                body: JSON.stringify(data)
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('form-status').textContent = 'Message sent successfully!';
-                    document.getElementById('contact-form').reset();
-                } else {
-                    document.getElementById('form-status').textContent = 'Error sending message!';
-                }
-            })
-            .catch(error => {
-                document.getElementById('form-status').textContent = 'Error sending message!';
-                console.error('Error:', error);
-            });
-        }); })
-</script>
+        </script>
+         <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+         <script type="text/javascript">
+             (function(){
+                 // Initialize EmailJS with your user ID
+                 emailjs.init("iH9aAuGHABFIA0-XmHo_w");
+             })();
+     
+             document.getElementById('contact-form').addEventListener('submit', function(event) {
+                 event.preventDefault(); // Prevent the default form submission behavior
+                 
+                 // Get form values
+                 const name = document.getElementById('name').value;
+                 const email = document.getElementById('email').value;
+                 const message = document.getElementById('message').value;
+                 
+                 // Prepare email params
+                 const params = {
+                     from_name: name,
+                     from_email: email,
+                     message: message
+                 };
+                 
+                 // Send email using EmailJS
+                 emailjs.send("service_wzr0vfr", "template_knmdhgj", params)
+                     .then(function(response) {
+                         document.getElementById('form-status').textContent = "Message sent successfully!";
+                         document.getElementById('contact-form').reset();
+                     }, function(error) {
+                         document.getElementById('form-status').textContent = "Failed to send message!";
+                         console.log('FAILED...', error);
+                     });
+             });</script>
 <footer class="footer col-lg-12 col-sm-4 col-md-12"id="footer">
   <p id="rights">All Copy@Rights Reserved By Balakrishnan K</p>
   <div class="row icon"> 
