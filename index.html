@@ -202,35 +202,26 @@ window.onclick = function (event) {
              behavior: 'smooth'
             document.getElementById('rasingan').play();
         }
-        </script>
-         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js" > </script>
-         <script type="text/javascript">
-           (function() {
-           emailjs.init("Gavb0ITxTc2LrtUck");
-           })(); 
-     
-           function sendemail(){
-
-var email=document.getElementById("email").value;
-var from_name=document.getElementById("name").value;
-var message=document.getElementById("message").value;
-
-var templateParams = {
-      email: email,
-      to_name:name,
-      message: message
-    };
-
-    emailjs.send('service_wzr0vfr', 'template_knmdhgj', templateParams)
-.then(function(response) {
-   console.log('SUCCESS!', response.status, response.text);
-   window.alert("Sent successfully!");
-   
-})
-
-   
-}
-              </script>
+        $('#contact-form').on('submit', function(event) {
+    event.preventDefault(); // prevent reload
+    
+    var formData = new FormData(this);
+    formData.append('service_id', 'service_wzr0vfr');
+    formData.append('template_id', 'template_yxmseob');
+    formData.append('user_id', 'Gavb0ITxTc2LrtUck');
+ 
+    $.ajax('https://api.emailjs.com/api/v1.0/email/send-form', {
+        type: 'POST',
+        data: formData,
+        contentType: false, // auto-detection
+        processData: false // no need to parse formData to string
+    }).done(function() {
+        alert('Your mail is sent!');
+    }).fail(function(error) {
+        alert('Oops... ' + JSON.stringify(error));
+    });
+});
+    </script>
 <footer class="footer col-lg-12 col-sm-4 col-md-12"id="footer">
   <p id="rights">All Copy@Rights Reserved By Balakrishnan K</p>
   <div class="row icon"> 
