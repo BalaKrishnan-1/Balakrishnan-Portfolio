@@ -335,6 +335,10 @@
       width: 80%;
       max-width: 700px;
   }
+  .Contact{
+    min-width:150%!important;
+    margin-left:-80px!important;
+  }
   }
   @media (min-width:992px){
     
@@ -423,6 +427,7 @@
 }
 .Contact{
   min-width:200%!important;
+  margin-left:-80px!important;
 }
    h1{
      font-size:12px!important;
@@ -466,6 +471,10 @@
       top: 150px !important;
       width: 80%;
       max-width: 700px;
+  }
+  .Contact{
+    min-width:200%!important;
+    margin-left:-80px!important;
   }
   }
 @media (max-width:1300px){
@@ -562,6 +571,24 @@
     margin-top:15px!important;
     font-size: 16px!important;
     margin-left:-20px!important;
+  }
+  .footer{
+    min-width:100%!important;
+  }
+  .footer .icon{
+    margin-left:40px!important;
+    width:250px;
+    height:50px;
+    padding-top:10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    justify-content:center;
+    background-color:#fff!important;
+    gap:20px!important;
+  }
+  .footer #rights{
+    font-size:14px!important;
+    margin-left:1px!important;
   }
     #s-button{
       margin-left:70%!important;
@@ -768,4 +795,52 @@
     input[type=submit]:hover {
       background-color: #45a049;
     }
-    
+    .footer{
+      background-color: #2e2e2e;
+      color:#fafafac7;
+      width:100%;
+      height:auto;
+      padding:100px;
+    }
+    .icon{
+      margin-left:40%!important;
+      width:250px;
+      height:50px;
+      padding-top:10px;
+      box-sizing: border-box;
+      border-radius: 30px;
+      justify-content: center;
+      background-color:#fff!important;
+      gap:25px!important;
+    }
+   .icon a{
+    text-decoration: none!important;
+   }
+   #i-1{
+    background: #833ab4;
+    background: linear-gradient(
+      to right,
+      #833ab4,#fd1d1d,#fcb045);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   }
+   #i-2{
+   color:	#1877F2!important;
+   }
+   #i-3{
+   color:#f6bb02;
+   }
+   #i-4{
+    color: #0077B5!important;
+   }
+   #i-5{
+    color:#000;
+   }
+   .footer #rights{
+    margin-left:35%;
+    font-size:24px;
+  }
+  
+
+ 
